@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+
+    <EditText
+        android:drawableLeft="@drawable/baseline_search_24"
+        android:id="@+id/et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70sp"
+        android:hint=" Enter city name here "
+        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/getW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#48B7EA"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/et"
+        android:text="Get Weather"
+        android:onClick="getWeather"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/sun"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:src="@drawable/thermometer"/>
+
+
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:src="@drawable/humidity"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="50dp"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+                android:src="@drawable/storm" />
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+
+            >
+
+            <TextView
+                android:fontFamily="@font/fontstyle1"
+                android:id="@+id/temp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:fontFamily="@font/fontstyle1"
+                android:id="@+id/humidity"
+                android:textColor="@color/black"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="55dp"
+                android:textSize="20dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:fontFamily="@font/fontstyle1"
+                android:id="@+id/wind"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginLeft="35dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                 />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
